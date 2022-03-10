@@ -1,11 +1,9 @@
-import java.util.Scanner;
-
 public class Employee {
     private String name;
     private String surname;
-    private int salary;
+    private double salary;
 
-    public Employee(String name, String surname, int salary) {
+    public Employee(String name, String surname, double salary) {
         this.name = name;
         this.surname = surname;
         this.salary = salary;
@@ -27,17 +25,18 @@ public class Employee {
         this.surname = surname;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
-    public Employee getAllData(double salary) {
-        System.out.println("Salary for " + name + " " + surname + " is: " + salary);
-        return this;
+    public String getAllData() {
+        System.out.println("Salary for " +name+ " " +surname+" is: "+salary);
+        return name + surname + salary;
+
     }
 }
 
