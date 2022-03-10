@@ -42,7 +42,7 @@ public class Company {
         System.out.println("The sum of salaries for all employees is " + salarySum);
     }
 
-    public void getAllData() {
+    public void getAllEmployeesData() {
         for (Employee j : listOfEmployees) {
             j.getAllData();
         }
@@ -58,7 +58,7 @@ public class Company {
                     pickMenuOptions();
                     break;
                 case 2:
-                    getAllData();
+                    getAllEmployeesData();
                     pickMenuOptions();
                     break;
                 case 3:
