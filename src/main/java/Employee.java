@@ -33,10 +33,8 @@ public class Employee {
         this.salary = salary;
     }
 
-    public String getAllData() {
-        System.out.println("Salary for " +name+ " " +surname+" is: "+salary);
-        return name + surname + salary;
-
+    public String toString() {
+        return "Salary for " +name+ " " +surname+" is: "+salary;
     }
 }
 

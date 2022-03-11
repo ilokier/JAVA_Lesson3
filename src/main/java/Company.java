@@ -18,7 +18,7 @@ public class Company {
             employee.setSurname(scan.nextLine());
             System.out.println("Enter employee salary");
             employee.setSalary(scan.nextInt());
-            employee.setName(scan.nextLine());
+            scan.nextLine();
         } catch (InputMismatchException e) {
             System.out.println("You entered wrong values. Please try again");
             scan.nextLine();
@@ -28,13 +28,13 @@ public class Company {
     }
 
     public Employee addEmployeesToList(Employee employee) {
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 5; i++) {
             listOfEmployees.add(createEmployee(new Employee(name, surname, salary)));
         }
         return employee;
     }
 
-    public void sumSalary() {
+    public void sumEmployeesSalary() {
         int salarySum = 0;
         for (int j = 0; j < listOfEmployees.size(); j++) {
             salarySum += listOfEmployees.get(j).getSalary();
@@ -44,7 +44,7 @@ public class Company {
 
     public void getAllEmployeesData() {
         for (Employee j : listOfEmployees) {
-            j.getAllData();
+            System.out.println(j.toString());
         }
     }
     public void pickMenuOptions() {
@@ -54,7 +54,7 @@ public class Company {
             scan.nextLine();
             switch (numberFromMenu) {
                 case 1:
-                    sumSalary();
+                    sumEmployeesSalary();
                     pickMenuOptions();
                     break;
                 case 2:
@@ -66,6 +66,7 @@ public class Company {
                     pickMenuOptions();
                     break;
                 case 4:
+                    System.out.println("End of program");
                     break;
                 default:
                     System.out.println("Please provide a proper number: 1, 2, 3 or 4. Try again");
